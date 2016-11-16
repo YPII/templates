@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <title>Patient Info</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script>
+      
+      var view = {
+        PLastName : "Mouse",
+        PFirstName : "Mickey"
+      };
+
+      function loadTemplates(){
+        var output = Mustache.render("Patient Name: {{PLastName}}, {{PFirstName}}", view);
+        document.getElementById('patientName').innerHTML = output;
+      }
+      
+    </script>
+  </head>
+  <body onload="loadTemplates()" >
+    <p id="patientName"></p>
+  </body>
+</html>
